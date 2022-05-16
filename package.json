@@ -33,5 +33,14 @@
     "test-node": "^0.0.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
-  }
+  },
+  "contributors": [],
+  "keywords": [
+    "testing",
+    "bdd",
+    "cucumber",
+    "gherkin",
+    "tests",
+    "typescript"
+  ]
 }
