@@ -1,5 +1,6 @@
 {
-  "name": "test-cucumber7",
+  "name": "test-cucumber8",
+  "description": "typescript cucumber v8 template",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Ming-der Wang <mingderwang@gmail.com>",
