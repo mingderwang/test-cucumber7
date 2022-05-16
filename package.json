@@ -1,8 +1,8 @@
 {
   "name": "test-cucumber7",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "index.js",
-  "author": "Ming-der Wang",
+  "author": "Ming-der Wang <mingderwang@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "rimraf build && npm run format && npm run lint && tsc && npm run cucumber-check",
