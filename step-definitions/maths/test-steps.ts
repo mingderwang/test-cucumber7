@@ -11,7 +11,7 @@ When('she eats {int} cucumbers', async function () {
   return 'pending'
 })
 
-Then('she will he full', async function () {
+Then('she will be full', async function () {
   // Write code here that turns the phrase above into concrete actions
   return 'pending'
 })
