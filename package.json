@@ -1,7 +1,7 @@
 {
-  "name": "test-cucumber8",
+  "name": "etherspot-cucumber8-test",
   "description": "typescript cucumber v8 template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "main": "index.js",
   "author": "Ming-der Wang <mingderwang@gmail.com>",

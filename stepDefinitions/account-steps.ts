@@ -1,7 +1,7 @@
 import { When, Then, Given, setWorldConstructor } from "@cucumber/cucumber";
 import { EtherspotWorld } from "../world";
 import expect from "expect";
-import { BigNumber } from "ethers";
+import { BigNumber, utils } from "ethers";
 
 setWorldConstructor(EtherspotWorld); // only one world at a time.
 
@@ -19,7 +19,7 @@ When("she has a new account", async function (this: EtherspotWorld) {
 
 When(
   "Alice receive {int} Ether(s) from a faucet",
-  async function (this: EtherspotWorld, int) {
+  async function (this: EtherspotWorld, int: any) {
     // When('Alice receive {float} Ethers from a faucet', async function (float) {
     // Write code here that turns the phrase above into concrete actions
     console.log(int);
@@ -33,9 +33,9 @@ Then(
     // Then('her account balance is {float} Ethers', async function (float) {
     // Write code here that turns the phrase above into concrete actions
     const balance = await this.instance.sdk.getAccountBalances();
-    console.log("balance ", balance);
     const item = balance?.items[0].balance;
     const result = BigNumber.from(int);
+    console.log("🐤 balance ", utils.formatEther(item));
     expect(item.eq(result)).toBe(true);
   }
 );
