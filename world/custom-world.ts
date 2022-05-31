@@ -1,5 +1,4 @@
 import { SimpleOne } from "../domains/eating/simple-one";
-import { setWorldConstructor } from "@cucumber/cucumber";
 
 export interface CucumberWorldConstructorParams {
   parameters: { [key: string]: string };
@@ -16,5 +15,3 @@ export class CustomWorld {
     this.parameters = parameters;
   }
 }
-
-setWorldConstructor(CustomWorld);

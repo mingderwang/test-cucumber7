@@ -1,6 +1,5 @@
-import { Given, Then, When } from "@cucumber/cucumber";
-import { CustomWorld } from "../world";
-import { SimpleOne } from "../domains/eating/simple-one";
+import { Given, Then, When, setWorldConstructor } from "@cucumber/cucumber";
+import { CustomWorld, EtherspotWorld } from "../world";
 import expect from "expect";
 
 import { defineParameterType } from "@cucumber/cucumber";
@@ -11,9 +10,10 @@ defineParameterType({
   transformer: (s: string | number | Date) => new Date(s),
 });
 
-Given("愛麗絲肚子有點餓", async function (this: CustomWorld) {
-  this.instance = new SimpleOne();
-});
+setWorldConstructor(EtherspotWorld);
+//setWorldConstructor(CustomWorld);
+
+Given("愛麗絲肚子有點餓", async function (this: CustomWorld) {});
 
 When(
   "她吃了/她又吃了 {int} 條小黃瓜(s)",
