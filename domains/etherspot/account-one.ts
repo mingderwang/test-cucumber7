@@ -3,7 +3,7 @@ import { Sdk, Env, EnvNames, NetworkNames } from "etherspot";
 
 // const privateKey = randomPrivateKey();
 export class SimpleSdk implements TheOne {
-  private sdk: Sdk;
+  public sdk: Sdk;
   public privateKey: string; // input a private key
 
   /*
@@ -11,13 +11,18 @@ export class SimpleSdk implements TheOne {
    * privateKey is a private key, such as "0x8ce99745b7cde06cb1223f3644ccf11aee54166410856b0e226815e26bbd3860"
    *
    */
-  constructor(network: string = "testnets", privateKey: string) {
+  constructor(
+    chain: string = "etherspot",
+    network: string = "mainnets",
+    privateKey: string
+  ) {
     Env.defaultName = network as EnvNames;
     this.privateKey = privateKey;
     this.sdk = new Sdk(
       { privateKey: this.privateKey },
       {
-        networkName: "mumbai" as NetworkNames,
+        // chain: default("etherspot"), could be "mumbai", "xdai", "ropsten", etc.
+        networkName: chain as NetworkNames,
       }
     );
     //  console.info("new random private key (not been used) ", privateKey);
