@@ -2,7 +2,8 @@
 Feature: A new account
     If you have an account, you can receive Ethers
     Scenario: Create a new account
-        Given 愛麗絲肚子有點餓
-        When 她吃了 13 條小黃瓜s
-        And 她飽了耶
-
+        Given Alice apply a new account
+        When she has a new account
+        Then her account balance is 0 Ether
+        When Alice receive 10 Ethers from a faucet
+        Then her account balance is 10 Ethers
