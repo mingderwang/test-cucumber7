@@ -1,9 +1,8 @@
 import { When, Then, Given, setWorldConstructor } from "@cucumber/cucumber";
-import { EtherspotWorld, CustomWorld } from "../world";
+import { EtherspotWorld } from "../world";
 //import { SimpleSdk } from "../domains/etherspot/account-one";
 import expect from "expect";
 
-setWorldConstructor(CustomWorld);
 setWorldConstructor(EtherspotWorld);
 
 Given("Alice apply a new account", async function (this: EtherspotWorld) {
