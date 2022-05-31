@@ -26,3 +26,7 @@ When(
 Then("她沒有飽", async function (this: CustomWorld) {
   expect(this.instance.isFull()).toBe(false);
 });
+
+Then("她飽了", async function (this: CustomWorld) {
+  expect(this.instance.isFull()).toBe(true);
+});
