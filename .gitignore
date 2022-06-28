@@ -1,7 +1,2 @@
 node_modules
-<<<<<<< HEAD
 .project_key.json
-reports
-=======
-.project_key.json
->>>>>>> faacb8c (use options for SimpleSdk contructor)
